@@ -1,0 +1,109 @@
+.destination{
+    margin-bottom: 270px;
+    &-header{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 46px;
+    }
+    &-more{
+        // color: $primary-color;
+        display: flex;
+        align-items: center;
+        gap: 0 5px;
+        font-size: 15px;
+        font-weight: 600;
+        color: $DPrimary-color;
+        text-decoration: none;
+    }
+    &-list{
+        // display: grid;
+        // grid-template-columns: repeat(4, 1fr);
+        // grid-gap: 25px;
+        display: flex;
+        /* align-items: stretch; Làm các cột cao bằng nhau */
+        margin-left: -30px;
+        align-items: stretch;
+    }
+    &-item{
+        height: 347px;
+        border-radius: 10px;
+        overflow: hidden;
+        /* background-color: royalblue; */
+        box-shadow: 10px;
+        margin-left: 30px;
+        width: 450px;
+        position: relative;
+    }
+    &-image{
+        // border-radius: 8px;
+        // height: 100%;
+        // width: 100%;
+        width: 100%;
+        height: 50%;
+        object-fit: cover;
+    }
+    &-content{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+        background: #fff;
+        border-radius: 0px 6px 0px 0px;
+        padding: 6px 10px 6px 0;
+        // color: $gray-darker
+    }
+    &-name{
+        font-size: 17px;
+        font-weight: 600;
+        color: $gray-darkest;
+        margin-left: 2px;
+    }
+    &-country{
+        margin-left: 2px; 
+        color: $gray-blur;
+    }
+    @media screen and (max-width: 1023px){
+        margin-bottom: 150px;
+        // &-list{
+        //     flex-direction: column;
+        //     gap: 50px 0;
+        //     justify-content: center;
+            
+        // }
+        &-list {
+        display: grid;
+        justify-content: flex-start;
+        grid-auto-columns: 480px;
+        grid-auto-flow: column;
+        grid-gap: 2.5rem;
+        overflow: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        scroll-snap-stop: always;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        -webkit-overflow-scrolling: touch;
+        scroll-padding: 1rem;
+        grid-template-columns: unset;
+        }
+        &-list::-webkit-scrollbar {
+        display: none;
+        width: 0;
+        }
+        &-list > *{
+        scroll-snap-align: start;
+        }
+        &-image{
+            width: 255px;
+        }
+        // &-item{
+        //     display:flex;
+        //     justify-content: space-between;
+        //     align-items: center; 
+        // }
+    }
+    @media screen and (max-width: 378px){
+        margin-bottom: 75px;
+    }
+}

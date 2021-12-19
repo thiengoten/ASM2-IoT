@@ -1,0 +1,54 @@
+.guide {
+  margin-bottom: 270px;
+  &-main{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 80px;
+}
+&-content{
+  width: 100%;
+}
+  &-heading{
+    margin-bottom: 20px;
+}
+  &-desc{
+    margin-bottom: 33px;
+    max-width: 520px;
+    text-align: justify;
+}
+@media screen and (min-width: 1024px) {
+  &-content{
+    // margin-top: -23%;
+    max-width: 620px;
+  }
+  &-image{
+    padding-right: 20px;
+    transform: translateX(65px);
+}
+
+}
+@media screen and (max-width: 1025px){
+  &-image{
+      img{
+          width: 550px;
+      }
+  }
+}
+@media screen and (max-width: 1023px){
+  margin-bottom: 150px;
+  &-main{
+    flex-direction: column;
+    gap: 50px 0;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 378px){
+  margin-bottom: 75px;
+  &-image{
+      img{
+          width: 345px;
+      }
+  }
+}
+}

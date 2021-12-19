@@ -1,0 +1,31 @@
+.header{
+    padding: 45px;
+    padding-bottom: 70px;
+    cursor: pointer;
+    &-main{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    @media screen and (max-width: 1023px){
+        &-main{
+            img{
+                margin-left: -44px;
+            }
+        }
+    }
+    @media screen and (min-width: 1024px){
+        &-main{
+            i{
+                display: none;
+            }
+        }
+    }
+    @media screen and (min-width: 768px){
+        &-main{
+            i{
+                margin-right: 20px;
+            }
+        }
+    }
+}
